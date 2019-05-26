@@ -2,33 +2,26 @@
 <head>
     <meta charset="utf8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
-    <script src="class.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
     <style>
         div{
             display:inline-block;
         }
     </style>
-</head>
-<body>
-    <div style="background-color:blue; width:15px; height:15px"></div>Ջուր
-    <div style="background-color:purple; width:15px; height:15px"></div>գիշատիչ
-    <div style="background-color:green; width:15px; height:15px"></div>խոտ
-    <div style="background-color:orange; width:15px; height:15px"></div>խոտակեր
-    <div style="background-color:red; width:15px; height:15px"></div>կարմիր
-    <div style="background-color:#acacac; width:15px; height:15px"></div>Դատարկ տարածք<br><br>
-</body>
-</html>
-
-<html>
-
-<head>
-    <style>
+        <style>
         #legend {position: absolute;top: 0;right: 0;width: 800px;} .legend-color {width: 30px;height: 30px;} td {border: 1px solid black; font-size: 14px; padding-left: 5px;}
+    
     </style>
 </head>
-
 <body>
+    <div style="background-color:blue; width:15px; height:15px"></div><span>Ջուր</span>
+    <div style="background-color:purple; width:15px; height:15px"></div><span>Գիշատիչ</span>
+    <div style="background-color:green; width:15px; height:15px"></div><span>Խոտ</span>
+    <div style="background-color:orange; width:15px; height:15px"></div><span>խոտակեր</span>
+    <div style="background-color:red; width:15px; height:15px"></div><span>Ամենակեր</span>
+
+    <button onclick="kill()">Kill</button>
     <table id="legend">
         <tr>
             <td class="legend-color">Գույն</td>
@@ -39,14 +32,6 @@
             <td>Սատկում է</td>
         </tr>
 
-        <tr>
-            <td class="legend-color" style="background-color:gray"></td>
-            <td>Դատարկ վանդակներ</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
         <tr>
             <td class="legend-color" style="background-color:green"></td>
             <td>Խոտ</td>
